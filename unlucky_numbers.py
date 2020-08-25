@@ -6,3 +6,4 @@ for i in range(1,21):
     else:
         print(f"{i} is odd")
         
+        
