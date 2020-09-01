@@ -13,6 +13,9 @@ class Deck:
         self.cards = [Card(suit, value) for suit in suits for value in values]
     def __repr__(self):
         return f"Deck of {self.count()} cards"
+
+    def __iter__(self):
+        return iter(self.cards)
     
     def count(self):
         return len(self.cards)
@@ -41,8 +44,5 @@ class Deck:
         return self._deal(num)
 
 d = Deck()
-d.shuffle()
-d.shuffle()
-d.shuffle()
-d.shuffle()
+
 print(d.deal_hand(4))
